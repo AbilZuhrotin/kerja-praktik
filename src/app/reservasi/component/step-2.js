@@ -13,26 +13,26 @@ export default function StepTwo() {
 
             <div className="space-y-6">
             <div className="w-full">
-                <label className="block text-sm font-black mb-2 text-[#382E2E] uppercase tracking-wider">Nama Pemesan</label>
+                <label className="block text-sm font-black mb-2 text-[#382E2E] tracking-wider">Nama Pemesan</label>
                 <input type="text" className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-none focus:ring-2 focus:ring-[#cbc500] transition-all" placeholder="Nama lengkap..." />
             </div>
 
             <div className="w-full">
-                <label className="block text-sm font-black mb-2 text-[#382E2E] uppercase tracking-wider">Nomor WhatsApp</label>
+                <label className="block text-sm font-black mb-2 text-[#382E2E] tracking-wider">Nomor WhatsApp</label>
                 <input type="tel" className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-none focus:ring-2 focus:ring-[#cbc500] transition-all" placeholder="08..." />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                <label className="block text-sm font-black mb-2 text-[#382E2E] uppercase tracking-wider">Tanggal</label>
+                <label className="block text-sm font-black mb-2 text-[#382E2E] tracking-wider">Tanggal</label>
                 <input type="date" className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-none focus:ring-2 focus:ring-[#cbc500]" />
                 </div>
                 <div>
-                <label className="block text-sm font-black mb-2 text-[#382E2E] uppercase tracking-wider">Jam Datang</label>
+                <label className="block text-sm font-black mb-2 text-[#382E2E] tracking-wider">Jam Datang</label>
                 <input type="time" className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-none focus:ring-2 focus:ring-[#cbc500]" />
                 </div>
                 <div>
-                <label className="block text-sm font-black mb-2 text-[#382E2E] uppercase tracking-wider">Jam Keluar</label>
+                <label className="block text-sm font-black mb-2 text-[#382E2E] tracking-wider">Jam Keluar</label>
                 <input type="time" className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-none focus:ring-2 focus:ring-[#cbc500]" />
                 </div>
             </div>
