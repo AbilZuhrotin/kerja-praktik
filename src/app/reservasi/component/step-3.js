@@ -1,11 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
-import { createClient } from "@/utils/supabase/client"; // Pastikan path ini benar untuk client-side
+import { createClient } from "@/utils/supabase/client";
 
-export default function StepThree() {
+export default function StepThree({ cart, setCart, onNext }) {
   const [menu, setMenu] = useState([]);
   const [filter, setFilter] = useState("Semua");
-  const [cart, setCart] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const supabase = createClient();
@@ -126,7 +125,9 @@ export default function StepThree() {
                   {totalItem}
                 </span>
               </div>
-              <button className="bg-[#cbc500] text-[#382E2E] px-8 py-3 rounded-2xl font-black text-sm tracking-tighter shadow-lg active:scale-95 transition-all">
+              <button 
+              onClick={onNext}
+              className="bg-[#cbc500] text-[#382E2E] px-8 py-3 rounded-2xl font-black text-sm tracking-tighter shadow-lg active:scale-95 transition-all">
                 Checkout Menu
               </button>
             </div>
