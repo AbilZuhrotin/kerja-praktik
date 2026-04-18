@@ -6,7 +6,7 @@ export default function StepOne({ onNext }) {
       {/* BANNER */}
       <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
         {/* Banner Foto Reservasi */}
-        <div className="relative w-full h-[250px] md:h-[330px] overflow-hidden">
+        <div className="relative w-full h-64 md:h-80 overflow-hidden">
           {/* Foto Banner */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -43,7 +43,7 @@ export default function StepOne({ onNext }) {
         <div className="grid gap-6 md:grid-cols-2 items-stretch">
           {/* Rule 1 */}
           <div className="bg-white dark:bg-black border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
-            <div className="text-black dark:text-white mt-1 flex-shrink-0">
+            <div className="text-black dark:text-white mt-1 shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
               </svg>
@@ -54,7 +54,7 @@ export default function StepOne({ onNext }) {
           </div>
           {/* Rule 2 */}
           <div className="bg-white dark:bg-black border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
-            <div className="text-black dark:text-white mt-1 flex-shrink-0">
+            <div className="text-black dark:text-white mt-1 shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
               </svg>
@@ -65,7 +65,7 @@ export default function StepOne({ onNext }) {
           </div>
           {/* Rule 3 */}
           <div className="bg-white dark:bg-black border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
-            <div className="text-black dark:text-white mt-1 flex-shrink-0">
+            <div className="text-black dark:text-white mt-1 shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
               </svg>
@@ -76,7 +76,7 @@ export default function StepOne({ onNext }) {
           </div>
           {/* Rule 4 */}
           <div className="bg-white dark:bg-black border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
-            <div className="text-black dark:text-white mt-1 flex-shrink-0">
+            <div className="text-black dark:text-white mt-1 shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
               </svg>

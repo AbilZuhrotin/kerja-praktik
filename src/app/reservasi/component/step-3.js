@@ -107,7 +107,7 @@ export default function StepThree({ cart, setCart, onNext }) {
 
       {/* Floating Checkout Bar */}
       {totalItem > 0 && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-[100] animate-in slide-in-from-bottom duration-500">
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-100 animate-in slide-in-from-bottom duration-500">
           <div className="bg-[#382E2E] p-4 rounded-3xl shadow-2xl flex items-center justify-between border border-[#cbc500]/20 backdrop-blur-md">
             <div className="flex items-center gap-3 pl-2 text-white">
               <div>

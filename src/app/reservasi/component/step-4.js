@@ -53,7 +53,7 @@ export default function StepFour({ cart, setCart, onBack, onNext }) {
             {/* Gambar Menu */}
             <img
               src={item.url_menu_image}
-              className="w-14 h-14 object-cover rounded-lg bg-gray-50 flex-shrink-0"
+              className="w-14 h-14 object-cover rounded-lg bg-gray-50 shrink-0"
               alt=""
             />
 
@@ -91,7 +91,7 @@ export default function StepFour({ cart, setCart, onBack, onNext }) {
             </div>
 
             {/* Counter Mini */}
-            <div className="flex items-center gap-2 bg-gray-50 px-2 py-1 rounded-full border border-gray-100 flex-shrink-0">
+            <div className="flex items-center gap-2 bg-gray-50 px-2 py-1 rounded-full border border-gray-100 shrink-0">
               <button
                 onClick={() => updateQty(item.id_menu, -1)}
                 className="text-left leading-relaxed text-[#382E2E] font-medium text-md w-5 h-5 flex items-center justify-center"
