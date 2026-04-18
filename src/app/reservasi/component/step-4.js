@@ -164,7 +164,7 @@ export default function StepFour({ cart, setCart, onBack, onNext }) {
         </div>
 
         <div className="flex justify-between text-gray-500 font-medium">
-          <span>PPN (10% Fixed)</span>
+          <span>PPN (10%)</span>
           <span>Rp {ppnTetap.toLocaleString("id-ID")}</span>
         </div>
 
@@ -200,10 +200,10 @@ export default function StepFour({ cart, setCart, onBack, onNext }) {
         </button>
 
         <button
-          onClick={onNext}
-          className="font-medium bg-[#382E2E] text-[#cbc500] px-8 py-2.5 rounded-full text-md shadow-md active:scale-95 transition-all tracking-tighter"
+        onClick={() => onNext({ type: paymentType, total: wajibBayarSekarang })}
+        className="font-medium bg-[#382E2E] text-[#cbc500] px-8 py-2.5 rounded-full text-md shadow-md active:scale-95 transition-all tracking-tighter"
         >
-          Buat Reservasi
+        Buat Reservasi
         </button>
       </div>
     </div>

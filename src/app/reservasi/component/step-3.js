@@ -86,10 +86,10 @@ export default function StepThree({ cart, setCart, onNext }) {
             </div>
 
             <div className="p-2.5 md:p-5 flex flex-col flex-1">
-              <h4 className="font-bold text-[#382E2E] text-[16px] md:text-base mb-0.5 line-clamp-1 uppercase">
+              <h4 className="font-medium text-[#382E2E] text-[10px] md:text-base mb-0.5 line-clamp-1">
                 {item.nama_menu}
               </h4>
-              <p className="font-medium text-[#382E2E] text-[12px] md:text-lg mb-4">
+              <p className="font-medium text-[#382E2E] text-[10px] md:text-lg mb-4">
                 Rp {item.harga.toLocaleString("id-ID")}
               </p>
               <div className="mt-auto flex justify-end">
