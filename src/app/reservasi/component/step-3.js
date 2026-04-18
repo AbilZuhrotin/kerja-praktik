@@ -57,7 +57,7 @@ export default function StepThree({ cart, setCart, onNext }) {
               <button
                 key={kat}
                 onClick={() => setFilter(kat)}
-                className={`px-6 py-2.5 rounded-full text-[10px] font-medium tracking-widest transition-all border whitespace-nowrap ${
+                className={`px-6 py-2.5 rounded-full leading-relaxed text-[#382E2E] font-medium text-xs md:text-base tracking-wider transition-all border whitespace-nowrap ${
                   filter === kat
                     ? "bg-[#382E2E] text-[#cbc500] border-[#382E2E]"
                     : "bg-white text-gray-400 border-gray-100 hover:border-[#cbc500]"
@@ -75,7 +75,7 @@ export default function StepThree({ cart, setCart, onNext }) {
         {menuFiltered.map((item) => (
           <div key={item.id_menu} className="bg-white rounded-sm border border-gray-100 shadow-sm overflow-hidden flex flex-col group transition-all">
             <div className="relative aspect-square bg-gray-50 overflow-hidden">
-              <span className="absolute top-2 left-2 z-10 bg-[#cbc500]/90 backdrop-blur-sm text-[#fffdcc] text-[10px] font-medium px-2 py-1 rounded-lg">
+              <span className="absolute top-2 left-2 z-10 bg-[#cbc500]/90 backdrop-blur-sm leading-relaxed text-[#382E2E] font-medium text-xs md:text-base px-2 py-1 rounded-full">
                 {item.kategori}/{item.pilih_menu}
               </span>
               <img
@@ -86,10 +86,10 @@ export default function StepThree({ cart, setCart, onNext }) {
             </div>
 
             <div className="p-2.5 md:p-5 flex flex-col flex-1">
-              <h4 className="font-medium text-[#382E2E] text-[10px] md:text-base mb-0.5 line-clamp-1">
+              <h4 className="text-left leading-relaxed text-[#382E2E] font-medium text-md">
                 {item.nama_menu}
               </h4>
-              <p className="font-medium text-[#382E2E] text-[10px] md:text-lg mb-4">
+              <p className="text-left leading-relaxed text-[#cbc500] font-medium text-xl">
                 Rp {item.harga.toLocaleString("id-ID")}
               </p>
               <div className="mt-auto flex justify-end">

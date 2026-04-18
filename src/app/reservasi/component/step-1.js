@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function StepOne() {
+export default function StepOne({ onNext }) {
   return (
     <main>
       {/* BANNER */}
@@ -127,7 +127,9 @@ export default function StepOne() {
             </p>
           </div>
 
-          <button className="btn border-none bg-[#382E2E] text-[#cbc500] hover:bg-[#2a2222] px-7 py-4 rounded-full text-lg font-bold shadow-md transition-all active:scale-95">
+          <button 
+          onClick={onNext}
+          className="btn border-none bg-[#382E2E] text-[#cbc500] hover:bg-[#2a2222] px-7 py-4 rounded-full text-lg font-bold shadow-md transition-all active:scale-95">
             Reservasi Now
           </button>
         </div>
