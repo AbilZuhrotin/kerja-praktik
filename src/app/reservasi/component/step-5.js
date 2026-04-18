@@ -22,10 +22,10 @@ export default function StepFive({ cart = [], paymentType = 'dp', totalWajibBaya
       
 
       {/* Struk Lyon's */}
-      <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+      <div className="bg-white dark:bg-gray-100 border border-gray-200 rounded-xl p-6 shadow-sm">
         <div className="text-center border-b border-gray-100 pb-2 mb-4">
           <h4 className="font-black text-[#382E2E] text-lg uppercase">Lyon's Sky</h4>
-          <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">Struk Digital</p>
+          <p className="text-[9px] text-gray-400 dark:text-black font-bold uppercase tracking-widest">Struk Digital</p>
         </div>
 
 
@@ -53,7 +53,7 @@ export default function StepFive({ cart = [], paymentType = 'dp', totalWajibBaya
           </div>
           <div className="flex justify-between text-xs">
             <span className="text-gray-400 uppercase font-bold text-[9px]">Payment Status</span>
-            <span className="px-3 py-1 bg-amber-50 text-amber-600 text-[9px] font-black border border-amber-200 rounded-md uppercase">
+            <span className="px-1.5 py-1 bg-amber-50 text-amber-600 text-[9px] font-black border border-amber-200 rounded-md uppercase">
             Pending
             </span>
         </div>
@@ -92,7 +92,7 @@ export default function StepFive({ cart = [], paymentType = 'dp', totalWajibBaya
       <div className="mt-8 space-y-3">
         <button 
           onClick={handleWhatsApp}
-          className="w-full bg-[#25D366] text-white py-4 rounded-xl font-black text-xs shadow-xl flex items-center justify-center gap-2"
+          className="w-full bg-[#25D366] text-white dark:text-black py-4 rounded-xl font-black text-xs shadow-xl flex items-center justify-center gap-2"
         >
           Kirim Bukti Pembayaran
         </button>

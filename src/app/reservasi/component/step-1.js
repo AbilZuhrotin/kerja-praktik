@@ -36,52 +36,52 @@ export default function StepOne({ onNext }) {
       <div className="max-w-5xl mx-auto px-6 py-12">
         {/* Pembungkus subjudul */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-[#382E2E]">Syarat & Ketentuan Reservasi</h2>
+          <h2 className="text-3xl font-bold text-[#382E2E] dark:text-white">Syarat & Ketentuan Reservasi</h2>
           <div className="h-1 w-20 bg-[#cbc500] mx-auto mt-2 rounded-full"></div>
         </div>
         {/* Pembungkus rule */}
         <div className="grid gap-6 md:grid-cols-2 items-stretch">
           {/* Rule 1 */}
-          <div className="bg-white border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
-            <div className="shrink-0 pt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="#382E2E" className="size-6">
+          <div className="bg-white dark:bg-black border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
+            <div className="text-black dark:text-white mt-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
               </svg>
             </div>
-            <span className="text-left leading-relaxed text-[#382E2E] font-medium text-sm md:text-base">
+            <span className="text-left leading-relaxed text-[#382E2E] dark:text-white font-medium text-sm md:text-base">
               Reservasi untuk keep tanggal dan meja melakukan pembayaran uang muka sebesar 50% dari pesanan
             </span>
           </div>
           {/* Rule 2 */}
-          <div className="bg-white border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
-            <div className="shrink-0 pt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="#382E2E" className="size-6">
+          <div className="bg-white dark:bg-black border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
+            <div className="text-black dark:text-white mt-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
               </svg>
             </div>
-            <span className="text-left leading-relaxed text-[#382E2E] font-medium text-sm md:text-base">
+            <span className="text-left leading-relaxed text-[#382E2E] dark:text-white font-medium text-sm md:text-base">
               Apabila reservasi dibatalkan, uang muka tidak dapat dikembalikan
             </span>
           </div>
           {/* Rule 3 */}
-          <div className="bg-white border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
-            <div className="shrink-0 pt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="#382E2E" className="size-6">
+          <div className="bg-white dark:bg-black border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
+            <div className="text-black dark:text-white mt-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
               </svg>
             </div>
-            <span className="text-left leading-relaxed text-[#382E2E] font-medium text-sm md:text-base">
+            <span className="text-left leading-relaxed text-[#382E2E] dark:text-white font-medium text-sm md:text-base">
               Batas akhir pembatalan reservasi dilayani sampai H-1 keep tanggal
             </span>
           </div>
           {/* Rule 4 */}
-          <div className="bg-white border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
-            <div className="shrink-0 pt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="#382E2E" className="size-6">
+          <div className="bg-white dark:bg-black border border-gray-200 shadow-sm rounded-2xl flex items-start p-5 gap-4 w-full h-full transition-all hover:shadow-md">
+            <div className="text-black dark:text-white mt-1 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
               </svg>
             </div>
-            <span className="text-left leading-relaxed text-[#382E2E] font-medium text-sm md:text-base">
+            <span className="text-left leading-relaxed text-[#382E2E] dark:text-white font-medium text-sm md:text-base">
               Informasi lebih lanjut bisa menghubungi admin Lyon's +62 851-6260-1067
             </span>
           </div>
@@ -91,7 +91,7 @@ export default function StepOne({ onNext }) {
     {/* TUTORIAL */}
       <div className="max-w-5xl mx-auto px-6 py-2">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-[#382E2E]">Tutorial Reservasi</h2>
+          <h2 className="text-3xl font-bold text-[#382E2E] dark:text-white">Tutorial Reservasi</h2>
           <div className="h-1 w-20 bg-[#cbc500] mx-auto mt-2 rounded-full"></div>
         </div>
 
