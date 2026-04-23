@@ -8,7 +8,7 @@ export default function StepFive({ cart = [], paymentType = 'dp', totalWajibBaya
     const adminNumber = process.env.NEXT_PUBLIC_KONFIRMASI_PEMBAYARAN; 
     const listMenu = cart.map(item => `- ${item.nama_menu} (${item.qty}x)`).join('%0A');
     
-    const message = `Halo Admin Lyon's Sky!%0A%0ASaya sudah melakukan pembayaran reservasi PENDING:%0A%0A` +
+    const message = `Halo Admin Lyon's Sky!%0A%0ASaya sudah melakukan pembayaran reservasi Proses:%0A%0A` +
       `*Kode Booking:* ${bookingCode}%0A` +
       `*Metode:* ${paymentType.toUpperCase()}%0A` +
       `*Total Bayar:* Rp ${totalWajibBayar.toLocaleString("id-ID")}%0A%0A` +
