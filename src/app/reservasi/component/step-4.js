@@ -34,6 +34,11 @@ export default function StepFour({ cart, setCart, onBack, onNext }) {
     );
   };
 
+  // --- TAMBAHKAN INI BIAR TOMBOL HAPUS JALAN ---
+  const removeItem = (id) => {
+    setCart((prev) => prev.filter((item) => item.id_menu !== id));
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 animate-in fade-in duration-700">
       {/* Header */}
@@ -234,9 +239,17 @@ export default function StepFour({ cart, setCart, onBack, onNext }) {
         </button>
 
         <button
-          onClick={() =>
-            onNext({ type: paymentType, total: wajibBayarSekarang })
-          }
+          onClick={() => {
+            // Hitung sisa di sini sebelum kirim
+            const sisa = paymentType === "dp" ? Math.round(subtotalAsli * 0.5) : 0;
+            
+            // Kirim semua paket lengkapnya
+            onNext({ 
+              type: paymentType, 
+              total: wajibBayarSekarang,
+              sisa: sisa 
+            });
+          }}
           className="font-medium bg-[#382E2E] text-[#cbc500] px-8 py-2.5 rounded-full text-md shadow-md active:scale-95 transition-all tracking-tighter"
         >
           Buat Reservasi

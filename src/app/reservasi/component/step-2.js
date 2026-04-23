@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { simpanReservasi } from "@/app/actions/reservation";
+import Swal from 'sweetalert2';
 
 export default function StepTwo({ onNext, onBack }) {
     // State untuk menampung input user
@@ -51,9 +52,14 @@ export default function StepTwo({ onNext, onBack }) {
     const handleLanjut = async () => { // Tambahkan 'async' di sini
         // 1. Validasi field wajib diisi semua
         if (!localData.nama || !localData.tanggal || !localData.jamDatang || !localData.jamKeluar || !localData.jumlahOrang) {
-            alert("Waduh, isi dulu semua datanya ya, jangan ada yang kosong!");
-            return;
-        }
+        Swal.fire({
+            icon: 'warning',
+            title: 'Data Belum Lengkap',
+            text: 'Waduh, isi dulu semua datanya ya, jangan ada yang kosong!',
+            confirmButtonColor: '#382E2E',
+        });
+        return;
+    }
 
         const namaDepan = localData.nama ? localData.nama.split(' ')[0] : 'Kak';
         
@@ -70,13 +76,23 @@ export default function StepTwo({ onNext, onBack }) {
 
         // 2. CEK JAM DATANG (Aturan Kafe)
         if (totalMenitDatang < menitBuka) {
-            alert(`Lyon's Sky belum buka, ${namaDepan}! Kita buka jam 09.00 pagi.`);
+            Swal.fire({
+                icon: 'warning',
+                title: `Belum ${namaDepan}!`,
+                text: `Lyon's Sky belum buka, ${namaDepan}! Kita buka jam 09.00 pagi.`,
+                confirmButtonColor: '#382E2E',
+            });
             return;
         }
 
         // 3. CEK JAM KELUAR (Anti-Tembus jam subuh)
         if (totalMenitKeluar < menitBuka && totalMenitKeluar !== 0) {
-            alert(`${namaDepan}, jam segitu kita udah tutup. Lyon's tutup jam 00.00 malam.`);
+            Swal.fire({
+                icon: 'warning',
+                title: 'Tutup!',
+                text: `${namaDepan}, jam segitu kita udah tutup. Lyon's tutup jam 00.00 malam.`,
+                confirmButtonColor: '#382E2E',
+            });
             return;
         }
 
@@ -84,7 +100,12 @@ export default function StepTwo({ onNext, onBack }) {
         const totalMenitKeluarFix = totalMenitKeluar === 0 ? 1440 : totalMenitKeluar;
         
         if (totalMenitKeluarFix <= totalMenitDatang) {
-            alert(`Masa pulangnya lebih cepet daripada datangnya, ${namaDepan}? Cek lagi jamnya ya!`);
+            Swal.fire({
+                icon: 'warning',
+                title: 'Nggak salah Jamnya?',
+                text: `Masa pulangnya lebih cepet daripada datangnya si, ${namaDepan}? Coba lagi jamnya!`,
+                confirmButtonColor: '#382E2E',
+            });
             return;
         }
 
@@ -104,9 +125,16 @@ export default function StepTwo({ onNext, onBack }) {
 
         // Kalau hasilnya gagal (bentrok), munculin alert di Step 2 ini!
         if (result.success === false) {
-            alert(result.message); 
-            return; // Berhenti di sini, user gak bisa lanjut ke Step 3
-        }
+        // PAKAI SWEETALERT DI SINI BIL!
+        Swal.fire({
+            icon: 'error',
+            title: 'Meja Tidak Tersedia',
+            text: result.message, // Ini bakal ngambil pesan dari reservation.js tadi
+            confirmButtonColor: '#382E2E',
+            confirmButtonText: 'Cek Meja Lain'
+        });
+        return; 
+    }
 
         // 7. Kalau aman, baru boleh lanjut
         onNext(localData);

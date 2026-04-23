@@ -15,24 +15,27 @@ export default function ReservasiPage() {
 
   const [customerData, setCustomerData] = useState({});
 
-  const handleFinalSubmit = async (paymentData) => {
-    // Gabungkan semua data
+  // Di page.js kamu
+const handleFinalSubmit = async (paymentData) => {
+    // paymentData isinya: { type, total, sisa } dari Step 4 tadi
+    
     const finalData = {
-      ...customerData,
-      ...paymentData,
-      totalBayar: paymentData.total,
-      metode: paymentData.type
+        ...customerData,         // Data Step 2 (nama, wa, tgl, dll)
+        totalBayar: paymentData.total, 
+        metode: paymentData.type,     
+        sisaBayar: paymentData.sisa    // PAKAI paymentData.sisa, BUKAN sisa DOANG
     };
 
-    // Jalankan Action Simpan ke DB
-    const result = await simpanReservasi(finalData, cart);
+    console.log("Data siap kirim:", finalData); // Buat ngecek di console log
 
+    const result = await simpanReservasi(finalData, cart);
+    
     if (result.success) {
-      setStep(5);
+        setStep(5);
     } else {
-      alert("Error: " + result.message);
+        Swal.fire('Gagal', result.message, 'error');
     }
-  };
+};
 
   return (
     <main className="min-h-screen py-4 md:py-8">

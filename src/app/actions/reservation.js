@@ -68,6 +68,7 @@ export async function simpanReservasi(dataForm, cartItems) {
   try {
     const { data: cust } = await supabase.from('customer').insert([{ nama_pelanggan: dataForm.nama, nomor_wa: dataForm.wa }]).select().single();
     
+    // 4. SIMPAN DATA
     const { data: resBaru, error: errSimpan } = await supabase.from('reservasi').insert([{
       id_customer: cust.id_customer,
       tgl_reservasi: dataForm.tanggal,
@@ -75,8 +76,12 @@ export async function simpanReservasi(dataForm, cartItems) {
       jam_keluar: dataForm.jamKeluar,
       jumlah_orang: dataForm.jumlahOrang,
       total_bayar: dataForm.totalBayar,
-      nomor_meja: dataForm.meja.join(', '), // Nyimpen jadi "1, 2"
-      status_reservasi: 'proses'
+      jenis_pembayaran: dataForm.metode,
+      sisa_bayar: dataForm.sisaBayar,
+      nomor_meja: dataForm.meja.join(', '),
+      status_reservasi: 'proses',
+      // TAMBAHKAN BARIS INI BIL:
+      jenis_pembayaran: dataForm.metode // Ambil dari dataForm
     }]).select().single();
 
     if (errSimpan) throw errSimpan;
