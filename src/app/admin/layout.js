@@ -13,7 +13,7 @@ export default function AdminLayout({ children }) {
   const role = "super_admin";
 
   const menus = [
-    { name: "Dashboard", href: "/admin/dashboard", icon: <LayoutDashboard size={18} /> },
+    { name: "Dashboard", href: "/admin", icon: <LayoutDashboard size={18} /> },
     { name: "Konfirmasi Bayar", href: "/admin/konfirmasi", icon: <CheckCircle size={18} /> },
     { name: "Status Meja", href: "/admin/meja", icon: <Table size={18} /> },
   ];

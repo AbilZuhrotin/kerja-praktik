@@ -156,9 +156,6 @@ export default function DashboardAdmin() {
           <h3 className="font-bold text-xs uppercase">
             Reservasi untuk 1 Bulan ke depan
           </h3>
-          <button className="text-[9px] font-semibold underline decoration-[#cbc500] decoration-2 underline-offset-4">
-            Lihat Semua
-          </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-100">
           {jadwalMendatang.map((item) => (
