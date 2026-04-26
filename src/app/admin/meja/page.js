@@ -5,9 +5,9 @@ import { Search, Edit3, Trash2, Plus, Calendar, Clock, MapPin } from 'lucide-rea
 export default function MejaManagementPage() {
   // --- DUMMY DATA RESERVASI ---
   const [reservasi, setReservasi] = useState([
-    { id: "RSV-001", nama: "Amelia", meja: "01", tgl: "24/04/2026", jam: "19:00 - 23:00", status: "Konfirmasi" },
-    { id: "RSV-002", nama: "Abil Zuhratin", meja: "04", tgl: "24/04/2026", jam: "19:00 - 23:00", status: "Proses" },
-    { id: "RSV-003", nama: "Rizky Ramadan", meja: "09", tgl: "24/04/2026", jam: "19:00 - 23:00", status: "Konfirmasi" },
+    { id: "RSV-001", nama: "Amelia", meja: "01", tgl: "24/04/2026", jam: "19:00 - 23:00", status: "Selesai" },
+    { id: "RSV-002", nama: "Abil Zuhratin", meja: "04", tgl: "24/04/2026", jam: "19:00 - 23:00", status: "Konfirmasi" },
+    { id: "RSV-003", nama: "Rizky Ramadan", meja: "09", tgl: "24/04/2026", jam: "19:00 - 23:00", status: "Selesai" },
   ]);
 
   const handleEdit = (id) => console.log("Edit ID:", id);
@@ -65,7 +65,7 @@ export default function MejaManagementPage() {
                     </div>
                   </td>
                   <td className="p-5 text-[12px] font-bold italic uppercase">
-                    <span className={item.status === 'Konfirmasi' ? 'text-green-600' : 'text-amber-500'}>
+                    <span className={item.status === 'Selesai' ? 'text-green-600' : 'text-amber-500'}>
                       {item.status}
                     </span>
                   </td>

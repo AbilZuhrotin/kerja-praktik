@@ -53,7 +53,7 @@ export default function AdminLayout({ children }) {
           </p>
         </div>
 
-        <nav className="space-y-2">
+        <nav className="space-y-3">
           {menus.map((menu) => (
             <Link
               key={menu.href}
@@ -77,9 +77,9 @@ export default function AdminLayout({ children }) {
                 <Link
                   key={menu.href}
                   href={menu.href}
-                  className={`flex items-center gap-1 p-2 rounded-xl font-medium text-sm transition-all ${pathname === menu.href ? "bg-[#cbc500] text-[#382E2E]" : "hover:bg-white/5 text-zinc-400"}`}
+                  className={`flex items-center gap-2 p-2 rounded-xl font-medium text-sm transition-all ${pathname === menu.href ? "bg-[#cbc500] text-[#382E2E]" : "hover:bg-white/5 text-zinc-400"}`}
                 >
-                  <span>{menu.icon}</span> {menu.name}
+                  <span className="pr-1">{menu.icon}</span> {menu.name}
                 </Link>
               ))}
             </div>

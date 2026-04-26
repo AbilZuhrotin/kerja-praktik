@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Search, Send, CheckCircle2, Calendar, MapPin, Clock, CreditCard } from "lucide-react";
+import { Search, Send, CheckCircle2, Calendar, MapPin, Clock, CreditCard, Receipt } from "lucide-react";
 
 export default function KonfirmasiPage() {
   // --- DATA DUMMY: Sudah ada nominal bayar ---
@@ -16,6 +16,7 @@ export default function KonfirmasiPage() {
       jam_masuk: "19:00",
       jam_keluar: "23.00",
       metode: "DP 50%",
+      status: "proses",
     },
     {
       id: "LSKY-202604002",
@@ -28,6 +29,7 @@ export default function KonfirmasiPage() {
       jam_masuk: "19:00",
       jam_keluar: "23.00",
       metode: "DP 50%",
+      status: "proses",
     },
     {
       id: "LSKY-202604003",
@@ -40,6 +42,7 @@ export default function KonfirmasiPage() {
       jam_masuk: "19:00",
       jam_keluar: "23.00",
       metode: "DP 50%",
+      status: "proses",
     },
   ]);
 
@@ -87,7 +90,7 @@ export default function KonfirmasiPage() {
                 </h4>
               </div>
               <span className="bg-amber-50 text-amber-700 text-[8px] font-bold px-2 py-1 rounded uppercase italic border border-amber-100">
-                {item.metode}
+                {item.status}
               </span>
             </div>
 
@@ -126,6 +129,12 @@ export default function KonfirmasiPage() {
                 <Clock size={12} />
                 <p className="text-[10px] font-semibold uppercase tracking-tighter italic leading-none">
                   {item.jam_masuk} - {item.jam_keluar} WIB
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-zinc-500">
+                <Receipt size={12} />
+                <p className="text-[10px] font-semibold uppercase tracking-tighter italic leading-none">
+                  {item.metode}
                 </p>
               </div>
             </div>

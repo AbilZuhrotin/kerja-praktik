@@ -52,9 +52,6 @@ export default function InvoicePage() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <p className="text-[12px] font-semibold text-zinc-400 mt-1 pl-5">
-                Digital Invoice
-              </p>
             </div>
 
             <div className="flex flex-col items-center md:items-end">
@@ -65,6 +62,9 @@ export default function InvoicePage() {
                 {data.invoice_id}
               </p>
             </div>
+          </div>
+          <div className="text-center text-[12px] font-semibold text-zinc-400 pb-5 uppercase">
+            Digital Invoice
           </div>
 
           {/* GRID INFO UTAMA (RESPONSIVE) */}
@@ -84,9 +84,9 @@ export default function InvoicePage() {
               </p>
             </div>
             <div className="space-y-1 sm:col-span-2 md:col-span-1">
-              <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest">
+              <div className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest">
                 Meja No
-              </p>
+              </div>
               <p className="text-sm font-black uppercase flex items-center justify-center md:justify-start gap-2 text-[#382E2E]">
                 {data.meja}
               </p>
