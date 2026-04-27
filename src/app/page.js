@@ -2,6 +2,14 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 // import { Instagram, MapPin, Star, ArrowRight, Clock } from "lucide-react";
 import Image from "next/image";
+import { createClient } from "@/utils/supabase/server";
+
+export default async function Page() {
+  const supabase = await createClient();
+  const { data: menu, error } = await supabase.from("menu").select("*");
+  if (error) {
+    return <p>Gagal mengambil data menu: {error.message}</p>;
+  }
 
 export default function Beranda() {
   const StarIcon = () => (
